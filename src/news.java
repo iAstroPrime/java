@@ -4,7 +4,7 @@ import java.util.Scanner;
 public class news {
     public static void main(String[] args) {
         Scanner su = new Scanner(System.in);
-        System.out.println("This is a command line calculator");
+        System.out.println("This is a command line calculator :- gagan");
         System.out.println("Enter for add = a, sub = s, multi = m, div = d ");
         char cal = su.next().charAt(0);
         switch (cal){
