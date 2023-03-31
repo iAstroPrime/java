@@ -1,0 +1,45 @@
+import java.util.Scanner;
+
+public class MarksPercentage {
+    public static void main(String[] args){
+
+        System.out.println("*****Welcome To Percentage Calculator*****\n");
+        Scanner sc=new Scanner(System.in);
+        System.out.println("First Of All!\t Please Enter Your name");
+        String name=sc.nextLine();
+        System.out.println("Dear "+name+",Enter the Maximum Marks Of a Subject");
+        int maxmarks=sc.nextInt();
+        System.out.println("Enter The Total Number Of Subjects");
+        int ns=sc.nextInt();
+        int []submarks=new int[ns];
+        int []temp=new int[ns];
+        for(int i=0;i<ns;i++){
+            int j=i+1;
+            System.out.println("Enter The Marks Of Subject "+j);
+            temp[i]=sc.nextInt();
+            if(temp[i]<maxmarks+1) {
+                submarks[i] = temp[i];
+
+            }
+        else{
+
+                System.out.println(temp[i]+" Marks Is Greater than "+maxmarks+" Marks\tPlease ReExecute the Program!");
+                System.exit(0);
+            }
+
+
+        }
+    int divid=(maxmarks*ns)/100;
+    int add=0;
+    for(int k=0;k<ns;k++){
+        add=add+submarks[k];
+    }
+    int result=add/divid;
+        System.out.println("Dear "+name+",You got Total Percent Of "+result+"%");
+
+
+
+
+
+    }
+}
